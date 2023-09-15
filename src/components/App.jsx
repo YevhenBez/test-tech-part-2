@@ -1,21 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
-const Home = lazy(() => import('../pages/home/Home'));
+// const Home = lazy(() => import('../pages/home/Home'));
+const Layout = lazy(() => import('../components/layout/Layout'));
+const Catalog = lazy(() => import('../pages/catalog/Catalog'));
 
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
+    <div    >
       <Routes>
-        <Route path="/" element={<Home />}/>
+        <Route path="/" element={<Layout />}>
+          <Route path="catalog" element={<Catalog />} />
+        </Route>
       </Routes>
     </div>
   );
