@@ -17,6 +17,12 @@ const Navigation = () => {
             
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/favorites" className={css.navLink}>
+                      <button type="button">Favorites</button>
+            
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );
