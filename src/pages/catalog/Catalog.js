@@ -1,9 +1,17 @@
 import CarsList from '../../components/carsList/CarsList';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { selectCars } from '../../redux/selectors';
+import React, { useEffect } from 'react';
+import { fetchCars } from '../../redux/operations';
 
 const Catalog = () => {
   const cars = useSelector(selectCars);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, [dispatch]);
 
   console.log(cars)
     return (
