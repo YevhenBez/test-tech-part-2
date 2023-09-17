@@ -8,7 +8,7 @@ const handlePending = state => {
 const handleFulfilled = (state, { payload }) => {
   state.isLoading = false;
   state.error = null;
-  state.arrayInitialCars = payload;
+  state.arrayInitialCars = [...state.arrayInitialCars, ...payload];
 };
 
 const handleRejected = (state, { payload }) => {
