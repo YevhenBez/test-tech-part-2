@@ -1,9 +1,11 @@
-function CarsListElement({id, year, make, model, type, functionalities, rentalPrice, rentalCompany, address }) {
+import css from './css/carsListElement.module.css';
+
+function CarsListElement({ id, year, make, model, type, functionalities, rentalPrice, rentalCompany, address }) {
 
   
 
   return (
-      <li >
+      <li className={css.item}>
       <p>
         {make} {model}, {year}
       </p>
