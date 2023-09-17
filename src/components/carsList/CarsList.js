@@ -1,4 +1,5 @@
 import CarsListElement from '../carsListElement/CarsListElement';
+import css from './css/carsList.module.css';
 // import { useSelector } from 'react-redux';
 // import { selectCars } from '../../redux/selectors';
 
@@ -9,7 +10,7 @@ const CarsList = ({ data }) => {
 
 
   return (
-    <ul>
+    <ul className={css.list}>
       {data.map(car => (
         <CarsListElement
           key={car.id}
