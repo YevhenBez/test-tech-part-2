@@ -1,11 +1,17 @@
 import css from './css/carsListElement.module.css';
+import iconHeart from '../../images/heart.svg';
 
 function CarsListElement({ id, year, make, model, type, functionalities, rentalPrice, rentalCompany, address }) {
 
   
 
   return (
-      <li className={css.item}>
+    <li className={css.item}>
+      <button type="button" className={css.favoriteBtn}>
+        <svg >
+              <use href={iconHeart + '#heart'}></use>
+            </svg>
+      </button>
       <p>
         {make} {model}, {year}
       </p>
