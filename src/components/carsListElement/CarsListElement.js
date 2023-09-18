@@ -7,11 +7,12 @@ function CarsListElement({ id, year, make, model, type, img, accessories, rental
   const country = location[2];
   const city = location[1];
   const feature = accessories[2];
+  const featureWords = feature.split(' ', 2);
 
   return (
     <li className={css.item}>
       <button type="button" className={css.favoriteBtn}>
-        <svg >
+        <svg className={css.heartSvg}>
               <use href={iconHeart + '#heart'}></use>
             </svg>
       </button>
@@ -20,9 +21,9 @@ function CarsListElement({ id, year, make, model, type, img, accessories, rental
         <div className={css.nameCar}>
           {make} <span className={css.nameCarAccent}>{model}</span>, {year}
         </div>
-        <p>
+        <div className={css.nameCar}>
           {rentalPrice}      
-        </p>
+        </div>
       </div>
       <ul className={css.infoList}>
         <li className={css.infoItem}>{city} |</li>
@@ -42,8 +43,8 @@ function CarsListElement({ id, year, make, model, type, img, accessories, rental
         <li className={css.infoItem}>
           {id} |      
         </li>
-        <li className={css.infoItem}>
-          {feature}      
+        <li className={css.infoItem} >
+          {featureWords}      
         </li>
       </ul>
       <button type="button" className={css.btnLearnMore}>Learn more</button>
