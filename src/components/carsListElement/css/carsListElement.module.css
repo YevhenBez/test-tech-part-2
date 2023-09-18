@@ -4,7 +4,6 @@
         height: 426px;
         border-radius: 12px;
 
-
 }
 
 .favoriteBtn {
@@ -26,4 +25,21 @@ position: absolute;
         object-fit: cover;
         object-position: center;
         border-radius: 14px;
+}
+
+.titleCar {
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+}
+
+.nameCar {
+    font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+}
+
+.nameCarAccent {
+    color: #3470FF;
 }

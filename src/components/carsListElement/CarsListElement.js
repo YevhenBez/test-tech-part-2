@@ -13,12 +13,14 @@ function CarsListElement({ id, year, make, model, type, img, functionalities, re
             </svg>
       </button>
       <img src={img} alt={`${make} ${model}`} width="274" height="268"  className={css.photo}/>
-      <p>
-        {make} {model}, {year}
-      </p>
-      <p>
-        {rentalPrice}      
-      </p>
+      <div className={css.titleCar}>
+        <div className={css.nameCar}>
+          {make} <span className={css.nameCarAccent}>{model}</span>, {year}
+        </div>
+        <p>
+          {rentalPrice}      
+        </p>
+      </div>
       <p>
         {address}      
       </p>    
