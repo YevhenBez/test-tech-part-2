@@ -51,6 +51,7 @@ position: absolute;
 }
 
 .infoItem {
+    
     font-size: 12px;
         font-weight: 400;
         line-height: 1.5;
@@ -68,3 +69,4 @@ position: absolute;
         padding-left: 6px;
     }
 }
+

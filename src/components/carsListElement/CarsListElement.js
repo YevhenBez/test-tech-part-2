@@ -1,11 +1,12 @@
 import css from './css/carsListElement.module.css';
 import iconHeart from '../../images/heart.svg';
 
-function CarsListElement({ id, year, make, model, type, img, functionalities, rentalPrice, rentalCompany, address }) {
+function CarsListElement({ id, year, make, model, type, img, accessories, rentalPrice, rentalCompany, address }) {
 
   const location = address.split(',');
   const country = location[2];
   const city = location[1];
+  const feature = accessories[2];
 
   return (
     <li className={css.item}>
@@ -24,25 +25,27 @@ function CarsListElement({ id, year, make, model, type, img, functionalities, re
         </p>
       </div>
       <ul className={css.infoList}>
-        <li>{city} |</li>
-        <li>{country} |</li>
+        <li className={css.infoItem}>{city} |</li>
+        <li className={css.infoItem}>{country} |</li>
            
-        <li>
+        <li className={css.infoItem}>
           {rentalCompany}      
         </li>
       </ul>
-      <p>
-        {type}      
-      </p>
-      <p>
-        {model}      
-      </p>
-      <p>
-        {id}      
-      </p>
-      <p>
-        {functionalities}      
-      </p>
+      <ul className={css.infoList}>
+        <li className={css.infoItem}>
+          {type} |      
+        </li>
+        <li className={css.infoItem}>
+          {make} |      
+        </li>
+        <li className={css.infoItem}>
+          {id} |      
+        </li>
+        <li className={css.infoItem}>
+          {feature}      
+        </li>
+      </ul>
       <button type="button">Learn more</button>
     </li>
   );
