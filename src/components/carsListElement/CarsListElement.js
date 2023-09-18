@@ -46,7 +46,7 @@ function CarsListElement({ id, year, make, model, type, img, accessories, rental
           {feature}      
         </li>
       </ul>
-      <button type="button">Learn more</button>
+      <button type="button" className={css.btnLearnMore}>Learn more</button>
     </li>
   );
 }
