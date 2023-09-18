@@ -3,7 +3,9 @@ import iconHeart from '../../images/heart.svg';
 
 function CarsListElement({ id, year, make, model, type, img, functionalities, rentalPrice, rentalCompany, address }) {
 
-  
+  const location = address.split(',');
+  const country = location[2];
+  const city = location[1];
 
   return (
     <li className={css.item}>
@@ -21,12 +23,14 @@ function CarsListElement({ id, year, make, model, type, img, functionalities, re
           {rentalPrice}      
         </p>
       </div>
-      <p>
-        {address}      
-      </p>    
-      <p>
-        {rentalCompany}      
-      </p>
+      <ul className={css.infoList}>
+        <li>{city} |</li>
+        <li>{country} |</li>
+           
+        <li>
+          {rentalCompany}      
+        </li>
+      </ul>
       <p>
         {type}      
       </p>
