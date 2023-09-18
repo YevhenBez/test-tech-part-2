@@ -1,7 +1,7 @@
 import css from './css/carsListElement.module.css';
 import iconHeart from '../../images/heart.svg';
 
-function CarsListElement({ id, year, make, model, type, functionalities, rentalPrice, rentalCompany, address }) {
+function CarsListElement({ id, year, make, model, type, img, functionalities, rentalPrice, rentalCompany, address }) {
 
   
 
@@ -12,6 +12,7 @@ function CarsListElement({ id, year, make, model, type, functionalities, rentalP
               <use href={iconHeart + '#heart'}></use>
             </svg>
       </button>
+      <img src={img} alt={`${make} ${model}`} width="274" height="268"  className={css.photo}/>
       <p>
         {make} {model}, {year}
       </p>

@@ -21,3 +21,9 @@ position: absolute;
     align-items: center;
 }
 
+.photo {
+    margin-bottom: 14px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 14px;
+}
